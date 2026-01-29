@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --logoClr: rgb(45, 101, 206);
+    --baseClr: rgb(0, 49, 141);
+    --trailClrA: rgba(0, 49, 141, 0.8);
+    --trailClrB: rgba(250, 250, 250, 0.5);
+    --baseClrLite: 45, 101, 206;
+    --sidebarClr: 219 64% 49%;
+    --sidebarLink: rgba(0, 49, 141, 0.45);
+
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border box-border;
+  }
+
+  body {
+    @apply bg-background text-foreground relative min-h-screen;
+  }
+
+  .flex_center {
+    @apply flex justify-center items-center
+  }
+
+  .section_style {
+    @apply w-full h-full overflow-y-auto px-2
+  }
+
+  .sidebar_link_style {
+    @apply flex justify-start items-center gap-4 w-full px-4 py-2 rounded text-white bg-primary/60 dark:bg-sidebarLinkClr drop-shadow
+  }
+
+  [data-scale="1.25"] {
+    zoom: 0.8;
+  }
+
+  .deleteBtnBg {
+    @apply bg-red-600 hover:bg-red-600/90 dark:bg-red-700 dark:hover:bg-red-700/90
+  }
+}
+
+.Landing_Title span {
+  color: hsl(var(--primary));
+  font-size: 1.5em;
+}
+
+/* Trails Animation CSS */
+.Trails-Trail {
+  transform: translateX(-150%);
+  animation: TrailMove 10s linear infinite;
+}
+
+[data-disableanimation=true] {
+  /* animation: none; */
+  animation-play-state: paused;
+}
+
+.Trails-Trail:nth-child(1) {
+  animation-delay: 1.5s;
+  animation-duration: 8s;
+}
+
+.Trails-Trail:nth-child(2) {
+  animation-delay: 2.5s;
+  animation-duration: 7s;
+}
+
+.Trails-Trail:nth-child(3) {
+  animation-delay: 0.5s;
+  /* animation-duration: 3s; */
+}
+
+.Trails-Trail:nth-child(4) {
+  animation-delay: 3.5s;
+  animation-duration: 9s;
+}
+
+.Trails-Trail:nth-child(5) {
+  animation-delay: 0s;
+  animation-duration: 6s;
+}
+
+.Trails-Trail:nth-child(6) {
+  animation-delay: 4.5s;
+  animation-duration: 7s;
+}
+
+.Trails-Trail:nth-child(7) {
+  animation-delay: 1s;
+  animation-duration: 6s;
+}
+
+.Trails-Trail:nth-child(8) {
+  animation-delay: 4s;
+  animation-duration: 8s;
+}
+
+.Trails-Trail:nth-child(9) {
+  animation-delay: 2s;
+  animation-duration: 5s;
+}
+
+.Trails-Trail:nth-child(10) {
+  animation-delay: 3s;
+  animation-duration: 9s;
+}
+
+@keyframes TrailMove {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Skeleton Animations */
+.SkeletonLoader-wave {
+  background: linear-gradient(to right,
+      rgba(var(--baseClrLite), 0.3),
+      rgba(var(--baseClrLite), 0.5),
+      rgba(var(--baseClrLite), 0.5),
+      rgba(var(--baseClrLite), 0.3));
+  background-size: 300%;
+  animation: LoaderAnimation 3s linear infinite;
+}
+
+.SkeletonLoader-pulse {
+  background: rgba(var(--baseClrLite), 0.6);
+}
+
+@keyframes LoaderAnimation {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -300% center;
+  }
+}
+
+/* Disable blue button click highlight */
+input,
+button,
+a,
+div {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Fix 125% windows scaling issue */
+@media (-webkit-device-pixel-ratio: 1.25) {
+  .scalingZoom {
+    zoom: 0.8;
+    min-height: 125vh;
+  }
+
+  .TrailZoom {
+    zoom: 1.25;
+  }
+}
+
+/* Custom ScrollBar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsla(var(--primary)/0.6);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+@media (width <=640px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+/* Ui debugging */
+/* * {
+  border: 1px solid red;
+  outline: 1px solid limegreen;
+} */
+
+/* .debug {
+  border: 1px solid red;
+  outline: 1px solid limegreen;
+} */

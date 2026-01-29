@@ -1,0 +1,62 @@
+{
+    "short_name": "ARMS",
+    "name": "ARMS | Sivakumar M",
+    "icons": [
+        {
+            "src": "./Icons/144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "./Icons/192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./Icons/384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "./Icons/512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "./Icons/ARMS-Screenshot.png",
+            "sizes": "768x359",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Welcome to ARMS"
+        },
+        {
+            "src": "./Icons/ARMS-Screenshot-Mobile.png",
+            "sizes": "354x787",
+            "type": "image/png",
+            "label": "Welcome to ARMS"
+        }
+    ],
+    "start_url": ".",
+    "id": "/",
+    "display": "standalone",
+    "theme_color": "#FAFAFA",
+    "background_color": "#FAFAFA",
+    "description": "ARMS is an educational platform designed to empower students with easy access to study materials for their respective subjects. Students can conveniently browse and download PDF documents uploaded by authorized faculties.",
+    "dir": "ltr",
+    "lang": "en",
+    "orientation": "portrait",
+    "display_override": [
+        "standalone",
+        "fullscreen"
+    ],
+    "categories": [
+        "productivity",
+        "education",
+        "social"
+    ],
+    "prefer_related_applications": false
+}
