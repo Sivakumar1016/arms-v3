@@ -1,3 +1,4 @@
+[![Vercel Deployment](https://deploy-badge.vercel.app/?url=https://arms-v3-ruby.vercel.app/&name=arms-v3&style=for-the-badge)](https://arms-v3-ruby.vercel.app/)
 ##### Created : 26/10/2023
 
 
@@ -97,4 +98,5 @@ ARMS (Academic Resource Management System) is an all-inclusive educational platf
 
 ## Contributing
 Pull requests are welcome! Feel free to open issues for any bugs or desired features.
+
 
