@@ -79,7 +79,7 @@ ARMS (Academic Resource Management System) is an all-inclusive educational platf
         title="TanStack Query"
         width="40px"
         height="40px"
-        src="https://githubusercontent.com/Sivakumar1016/Sivakumar.github.io/main/icons/reactquery.svg"
+        src="https://raw.githubusercontent.com/Sivakumar1016/Sivakumar.github.io/main/icons/reactquery.svg"
       />
       <img
         alt="EdgeStore"
@@ -98,5 +98,6 @@ ARMS (Academic Resource Management System) is an all-inclusive educational platf
 
 ## Contributing
 Pull requests are welcome! Feel free to open issues for any bugs or desired features.
+
 
 
